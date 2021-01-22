@@ -4,6 +4,10 @@ h1{
 h2{
     color: blueviolet;
 }
+label{
+    color: cornflowerblue;
+    font-weight: bold;
+}
 .server{
     color: deeppink;
     font-weight: bold;
