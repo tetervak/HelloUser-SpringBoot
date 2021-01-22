@@ -7,9 +7,10 @@
 </head>
 <body>
     <h1>Output</h1>
-    <h2>Hello
-        <span th:text="${user.firstName}">Alex</span>
-        <span th:text="${user.lastName}">Tetervak</span>!</h2>
+    <h2 th:object="${user}">Hello
+        <span th:text="*{firstName}">Alex</span>
+        <span th:text="*{lastName}">Tetervak</span>!
+    </h2>
     <p>
         Your lucky number is <span th:text="${rand}">34</span>.
     </p>
