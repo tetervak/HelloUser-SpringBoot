@@ -12,3 +12,10 @@ label{
     color: deeppink;
     font-weight: bold;
 }
+h3.error{
+    color: brown;
+}
+li.error{
+    font-style: italic;
+    color: crimson;
+}

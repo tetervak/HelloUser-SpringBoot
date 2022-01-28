@@ -18,7 +18,8 @@ public class HelloUserController {
 
 
     @GetMapping(value={"/","/Input"})
-    public String input(){
+    public String input(Model model){
+        model.addAttribute("user", new User());
         return "Input";
     }
 
