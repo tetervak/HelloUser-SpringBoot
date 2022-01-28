@@ -12,7 +12,7 @@ public class HelloUserController {
 
     Logger logger = LoggerFactory.getLogger(HelloUserController.class);
 
-    @GetMapping(value={"/","/Output"})
+    @GetMapping(value={"/","/output"})
     public String output(Model model){
         logger.trace("output() is called");
 
