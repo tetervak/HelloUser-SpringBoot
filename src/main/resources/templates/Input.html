@@ -8,7 +8,7 @@
 <body>
     <h1>Input</h1>
     <h2>Enter Your Name</h2>
-    <form th:object="${user}" action="Output.html" th:action="@{Output}">
+    <form th:object="${user}" action="Output.html" th:action="@{output}">
         <div th:if="${#fields.hasErrors('*')}">
             <h3 class="error">Input Errors</h3>
             <ul>
