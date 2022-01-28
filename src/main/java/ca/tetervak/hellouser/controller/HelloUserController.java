@@ -14,6 +14,7 @@ public class HelloUserController {
 
     @GetMapping(value={"/","/input"})
     public String input(){
+        logger.trace("input() is called");
         return "Input";
     }
 
