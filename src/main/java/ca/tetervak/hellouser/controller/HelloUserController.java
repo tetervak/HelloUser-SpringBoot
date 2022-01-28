@@ -17,12 +17,12 @@ public class HelloUserController {
     Logger logger = LoggerFactory.getLogger(HelloUserController.class);
 
 
-    @GetMapping(value={"/","/Input"})
+    @GetMapping(value={"/","/input"})
     public String input(){
         return "Input";
     }
 
-    @GetMapping("/Output")
+    @GetMapping("/output")
     public String output(
             Model model,
             @Validated @ModelAttribute User user,
