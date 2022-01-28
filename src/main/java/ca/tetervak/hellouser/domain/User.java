@@ -1,10 +1,14 @@
 package ca.tetervak.hellouser.domain;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 public class User implements Serializable {
 
+    @NotBlank
     private String firstName = "";
+
+    @NotBlank
     private String lastName = "";
 
     public User() {

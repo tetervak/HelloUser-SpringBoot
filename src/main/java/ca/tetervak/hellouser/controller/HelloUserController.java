@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,9 +25,14 @@ public class HelloUserController {
     @GetMapping("/Output")
     public String output(
             Model model,
-            @ModelAttribute User user
+            @Validated @ModelAttribute User user,
+            BindingResult bindingResult
     ){
         logger.trace("output() is called");
+
+        if(bindingResult.hasErrors()){
+            return "Input";
+        }
 
         int rand = 1 + (int)(100*Math.random());
         logger.debug("rand = " + rand);
