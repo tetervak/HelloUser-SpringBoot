@@ -10,7 +10,7 @@ public class HelloUserController {
 
     Logger logger = LoggerFactory.getLogger(HelloUserController.class);
 
-    @GetMapping(value={"/","/Output"})
+    @GetMapping(value={"/","/output"})
     public String output(){
         logger.trace("output() is called");
         return "Output";
